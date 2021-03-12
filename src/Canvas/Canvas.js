@@ -14,7 +14,7 @@ import CustomNode from "../CustomNode/CustomNode.js";
 const initElements = [
     { id: '1', type: 'customNode', data: { nodeType: "event", options: {} }, position: { x: 100, y: 5 } },
     // you can also pass a React Node as a label
-    { id: '2', type: 'customNode', data: { nodeType: "event", options: {} }, position: { x: 600, y: 200 } },
+    { id: '2', type: 'customNode', data: { nodeType: "filter", options: {} }, position: { x: 600, y: 200 } },
     { id: 'e1-2', target: '1', source: '2', animated: false },
 ];
 

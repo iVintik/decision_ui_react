@@ -23,7 +23,7 @@ export default memo(({ data }) => {
                     type="source"
                     position="left"
                     id="a"
-                    style={{ top: 10, background: '#8c8c8c', width: 8, height: 8 }}
+                    style={{ top: 10, background: '#8c8c8c', width: 16, height: 16 }}
                 />
             </div>
             <Card.Meta
@@ -36,7 +36,7 @@ export default memo(({ data }) => {
                     type="target"
                     position="right"
                     id="b"
-                    style={{ top: 10, background: '#8c8c8c', width: 8, height: 8 }}
+                    style={{ top: 10, background: '#8c8c8c', width: 16, height: 16 }}
                 />
             </div>
         </Card>
