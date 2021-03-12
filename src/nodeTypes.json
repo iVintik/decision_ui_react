@@ -1,6 +1,7 @@
 {
   "event":{
     "icon": "thunderbolt",
+    "color": "#faad14",
     "name": "Event",
     "description": "Input event",
     "options": {
@@ -10,6 +11,30 @@
             "component": "text-field",
             "name": "eventSource",
             "label": "Event Source",
+            "dataType": "string"
+          }
+        ]
+      }
+    }
+  },
+  "filter":{
+    "icon": "filter",
+    "color": "#1890ff",
+    "name": "Filter",
+    "description": "Filter event",
+    "options": {
+      "schema": {
+        "fields": [
+          {
+            "component": "text-field",
+            "name": "fieldName",
+            "label": "Field Name",
+            "dataType": "string"
+          },
+          {
+            "component": "text-field",
+            "name": "fieldValue",
+            "label": "Field Value",
             "dataType": "string"
           }
         ]

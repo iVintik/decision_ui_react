@@ -1,7 +1,10 @@
 import React from 'react';
 import CustomNode from "../CustomNode/CustomNode";
+import { Typography } from 'antd';
 
-//TODO: iterate through node types
+import nodeTypes from "../nodeTypes.json";
+
+const { Title, Paragraph } = Typography;
 
 const Palette = () => {
     const onDragStart = (event, nodeType) => {
@@ -9,10 +12,19 @@ const Palette = () => {
         event.dataTransfer.effectAllowed = 'move';
     };
     return (
-        <aside style = {{ padding: 10, background: '#fafafa' }}>
-            <div className="description">You can drag these nodes to the pane on the top.</div>
-            <div className="dndnode" onDragStart={(event) => onDragStart(event, "event")} draggable>
-                <CustomNode data = {{nodeType: "event"}}>Node</CustomNode>
+        <aside style = {{ padding: 10, background: '#fafafa', "flex-direction": 'row'}}>
+            <Title level={2}>Available Nodes</Title>
+            <div style = {{ display: "flex", "justify-content": "space-around"  }}>
+                {
+                    Object.keys(nodeTypes).map((nodeType)=>{
+                        return (
+                            <div className="dndnode" onDragStart={(event) => onDragStart(event, nodeType)} draggable>
+                                <CustomNode data={{nodeType: nodeType}}>Node</CustomNode>
+                            </div>
+                        );
+                    })
+
+                }
             </div>
         </aside>
     );

@@ -1,10 +1,13 @@
 import React, { memo } from 'react';
 import { Handle } from 'react-flow-renderer';
 import { Card } from 'antd';
-import Icon, { EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
+import { Icon } from '@ant-design/compatible';
 
 import nodeTypes from "../nodeTypes.json";
+
+
 
 export default memo(({ data }) => {
     return (
@@ -20,11 +23,11 @@ export default memo(({ data }) => {
                     type="source"
                     position="left"
                     id="a"
-                    style={{ top: 10, background: '#ffbb96', width: 20, height: 20 }}
+                    style={{ top: 10, background: '#8c8c8c', width: 8, height: 8 }}
                 />
             </div>
             <Card.Meta
-                avatar={<Icon type={nodeTypes[data.nodeType].icon} theme = "outlined"/>} /*TODO: not showing an icon, fix*/
+                avatar={<Icon type={nodeTypes[data.nodeType].icon} style={{ fontSize: '64px', color: nodeTypes[data.nodeType].color}}/>}
                 title={nodeTypes[data.nodeType].name}
                 description={nodeTypes[data.nodeType].description}
             />
@@ -33,7 +36,7 @@ export default memo(({ data }) => {
                     type="target"
                     position="right"
                     id="b"
-                    style={{ top: 10, background: '#69c0ff', width: 20, height: 20 }}
+                    style={{ top: 10, background: '#8c8c8c', width: 8, height: 8 }}
                 />
             </div>
         </Card>

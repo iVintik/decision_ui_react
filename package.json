@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/compatible": "^1.0.8",
     "@ant-design/icons": "^4.5.0",
     "@data-driven-forms/ant-component-mapper": "^2.22.0",
     "@data-driven-forms/react-form-renderer": "^2.22.0",
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@loadable/component": "^5.14.1"
   }
 }

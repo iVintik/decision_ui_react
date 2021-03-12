@@ -93,7 +93,7 @@ const Canvas = () => {
     return (
         <div className="dndflow">
             <ReactFlowProvider>
-                <div className="reactflow-wrapper" ref={reactFlowWrapper} style={{ height:700, background:"#f5f5f5" }}>
+                <div className="reactflow-wrapper" ref={reactFlowWrapper} style={{ height:600, background:"#f5f5f5" }}>
                     <ReactFlow
                         nodeTypes={nodeTypes}
                         elements={elements}
