@@ -1,0 +1,19 @@
+{
+  "event":{
+    "icon": "thunderbolt",
+    "name": "Event",
+    "description": "Input event",
+    "options": {
+      "schema": {
+        "fields": [
+          {
+            "component": "text-field",
+            "name": "eventSource",
+            "label": "Event Source",
+            "dataType": "string"
+          }
+        ]
+      }
+    }
+  }
+}
