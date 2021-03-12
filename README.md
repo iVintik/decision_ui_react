@@ -4,10 +4,10 @@
 
 
 ## Key files
-node-types.json - описание доступных узлов
-Canvas.js - компонент с холстом, включает в себя описание стартового состояния диаграммы
+node-types.json - описание доступных узлов.\
+Canvas.js - компонент с холстом, включает в себя описание стартового состояния диаграммы.\
 
-##Demo
+## Demo
 https://604b4c667415c69a95f0fdc8--optimistic-lamport-8d4b04.netlify.app
 
 ## Available Scripts
