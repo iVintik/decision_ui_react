@@ -39,16 +39,21 @@ const Canvas = () => {
             options: {}
         }
     )
-
+    //создание связь между узлами
     const onConnect = (params) => setElements((els) => addEdge(params, els));
+    //удаление узла\связей
     const onElementsRemove = (elementsToRemove) =>
         setElements((els) => removeElements(elementsToRemove, els));
+    
     const onLoad = (_reactFlowInstance) =>
         setReactFlowInstance(_reactFlowInstance);
+    
     const onDragOver = (event) => {
         event.preventDefault();
         event.dataTransfer.dropEffect = 'move';
     };
+    
+    // создание узла при перетаскивании из палитры
     const onDrop = (event) => {
         event.preventDefault();
         const reactFlowBounds = reactFlowWrapper.current.getBoundingClientRect();
@@ -65,12 +70,14 @@ const Canvas = () => {
         };
         setElements((es) => es.concat(newNode));
     };
+    
+    // открыть настройки узла по клику на узел на диаграмме
     const onElementClick = (event, element) => {
         if (element.type === "customNode"){
             setActiveNode({activeNode:element.id, activeNodeType:element.data.nodeType, options:element.data.options, optionsOpened: true})
         }
     }
-
+    // изменение настроек узла
     const ActiveNodeOptionsChange = (options) => {
         console.log(options);
         setElements((els) =>
