@@ -6,6 +6,7 @@ import nodeTypes from "../nodeTypes.json";
 
 const { Title, Paragraph } = Typography;
 
+//компонент с палитрой узлов доступных для добавления на диаграмму, набор опредлеяется объектом nodeTypes
 const Palette = () => {
     const onDragStart = (event, nodeType) => {
         event.dataTransfer.setData('application/reactflow', nodeType);
