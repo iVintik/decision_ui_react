@@ -8,7 +8,7 @@ import { Icon } from '@ant-design/compatible';
 import nodeTypes from "../nodeTypes.json";
 
 
-
+//Узел с базовым отображением и настраевымым цветом, иконкой и набором параметров
 export default memo(({ data }) => {
     return (
         <Card
