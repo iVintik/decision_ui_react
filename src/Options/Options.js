@@ -7,7 +7,7 @@ import { Button, Form, Drawer, Input } from 'antd';
 
 import nodeTypes from "../nodeTypes.json";
 
-
+//компонент позволяющий менять параметры узла
 function Options (props){
     console.log(nodeTypes[props.nodeType]);
     return (
