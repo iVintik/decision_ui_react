@@ -13,7 +13,7 @@ function Options (props){
     return (
         <Drawer width={520} placement={"right"}  visible={props.open} destroyOnClose={true} onClose={props.closeOptions}>
             <FormRenderer
-                //форма определяется набором параметров узла в соотсветствии со схемой
+                //форма определяется набором параметров узла в соотсветствии со схемой текущего узла в объекте nodeTypes
                 schema={nodeTypes[props.nodeType].options.schema}
                 componentMapper={componentMapper}
                 FormTemplate={FormTemplate}
